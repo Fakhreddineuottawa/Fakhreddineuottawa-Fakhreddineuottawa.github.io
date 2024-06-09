@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <title>Centre Dentaire</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-nav .nav-link {
+            color: #333;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #6495ED;
+        }
+        .header-master {
+            background-image: url('images/bg_01.jpg');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 150px 0;
+            position: relative;
+        }
+        .header-master::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .header-master .container {
+            position: relative;
+            z-index: 1;
+        }
+        .header-master h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .header-master p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .header-master .btn {
+            background-color: #6495ED;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+        .header-master .btn:hover {
+            background-color: #557ccf;
+        }
+        .diff .card {
+            margin-bottom: 20px;
+            border: none;
+            transition: transform 0.3s;
+        }
+        .diff .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+        .footer {
+            background-color: #4682B4;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .horaires {
+            text-align: center;
+            padding: 40px 0;
+        }
+        section {
+            padding: 60px 0;
+        }
+        .contact-section {
+            background-color: #f8f9fa;
+        }
+        .contact-section img {
+            border-radius: 8px;
+        }
+        .rendez-vous {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        .rendez-vous form .form-group {
+            margin-bottom: 20px;
+        }
+        .rendez-vous form .btn {
+            width: 100%;
+        }
+        .container h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .center-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+        .center-section .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .center-section img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .center-section .content {
+            max-width: 50%;
+            margin-left: 20px;
+        }
+        .center-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .center-section p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+    </style>
+    <script>
+        function myconfirm() {
+            return confirm('Votre rendez-vous est bien confirmé');
+        }
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Centre Dentaire</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#rendez-vous">Rendez-vous</a></li>
+                <li class="nav-item"><a class="nav-link" href="#notre-équipe">Notre Équipe</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#horaires">Horaires</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Map</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="header-master">
+    <div class="container">
+        <h2>Vous ne souriez pas à la hauteur de vos attentes?</h2>
+        <p>Notre clinique dentaire offre des services dentaires complets et de qualité supérieure dans un contexte de pratique familiale. Vous pouvez compter sur notre équipe dynamique et accueillante pour recevoir les soins dentaires qui répondent à vos attentes et à vos besoins.</p>
+        <a href="#rendez-vous" class="btn btn-primary">Prenez un rendez-vous!</a>
+    </div>
+</section>
+
+<section class="diff" id="services">
+    <div class="container">
+        <h2 class="text-center">Nos Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tooth fa-3x" style="color:#509d87;"></i>
+                        <h3 class="card-title">Denturologie</h3>
+                        <p class="card-text">La confection d’une prothèse dentaire est un art qui requiert temps, minutie et expertise. <b>Prix: 1500$</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tooth fa-3x" style="color:#509d87;"></i>
+                        <h3 class="card-title">Chirurgie dentaire</h3>
+                        <p class="card-text">Lorsqu’une dent est cariée ou fracturée d’une manière irrémédiable, elle doit habituellement être extraite. Sinon, elle pourrait donner lieu à un abcès douloureux. <b>Prix: 2500$</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tooth fa-3x" style="color:#509d87;"></i>
+                        <h3 class="card-title">Parodontie</h3>
+                        <p class="card-text">Lorsque les gencives saignent, c’est signe qu’elles sont enflammées. Cette inflammation est habituellement causée par le tartre sus- et sous-gingival. <b>Prix: 300$</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tooth fa-3x" style="color:#509d87;"></i>
+                        <h3 class="card-title">Examen dentaire complet</h3>
+                        <p class="card-text">Au moins une fois par année, le dentiste doit examiner l’intérieur et l’extérieur de votre cavité buccale, afin de s’assurer qu’il n’y a pas d’anomalie ou de présence de maladies. <b>Prix: 450$</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tooth fa-3x" style="color:#509d87;"></i>
+                        <h3 class="card-title">Dentisterie esthétique</h3>
+                        <p class="card-text">Grâce aux matériaux de restauration, il est possible de changer la forme et la couleur des dents. Résultat : des dents et un sourire magnifiques. <b>Prix: 500$</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-tooth fa-3x" style="color:#509d87;"></i>
+                        <h3 class="card-title">Urgence dentaire</h3>
+                        <p class="card-text">Notre service d’urgence dentaire à Gatineau vous propose des soins immédiats et efficaces pour une douleur, une dent brisée, une carie ou encore un abcès. <b>Prix: 500$</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="center-section" id="notre-centre">
+    <div class="container">
+        <div>
+            <img src="images/Image_accueil.jpeg" class="img-fluid" alt="Notre Centre">
+        </div>
+        <div class="content">
+            <h2>Notre Centre</h2>
+            <p>Notre équipe est fière de bien vous servir grâce à son grand laboratoire sur place, à ses 10 salles de soins dentaires ainsi qu’à une réception très spacieuse pour vous accueillir. Nous nous engageons à offrir une expérience de soins dentaires exceptionnelle et personnalisée pour chaque patient. Avec une approche centrée sur le patient, nous visons à améliorer votre santé bucco-dentaire et votre bien-être général. Nos installations modernes sont équipées de la technologie de pointe pour assurer des soins précis et confortables. Nous nous efforçons de créer un environnement chaleureux et accueillant où vous pouvez vous sentir à l'aise et en confiance. Venez découvrir la différence que notre centre dentaire peut faire pour vous et votre famille.</p>
+        </div>
+    </div>
+</section>
+
+<section class="Image-Background-2">
+    <div class="container text-center">
+        <h2>Centre Dentaire</h2>
+    </div>
+</section>
+
+<section class="étapes" id="notre-équipe">
+    <div class="container">
+        <h2 class="text-center">Notre Équipe</h2>
+        <div class="row">
+            <div class="col-md-4 team-member">
+                <img src="images/1.jpg" class="img-fluid" alt="Docteur A">
+                <h3>Docteur A</h3>
+                <p>description</p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="images/2.jpg" class="img-fluid" alt="Docteur B">
+                <h3>Docteur B</h3>
+                <p>description</p>
+            </div>
+            <div class="col-md-4 team-member">
+                <img src="images/3.jpg" class="img-fluid" alt="Docteur C">
+                <h3>Docteur C</h3>
+                <p>description</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="horaires" id="horaires">
+    <div class="container">
+        <h2 class="text-center">Horaires</h2>
+        <ul class="list-unstyled text-center">
+            <li>Lundi : 8h - 18h</li>
+            <li>Mardi : 8h - 18h</li>
+            <li>Mercredi : 8h - 17h</li>
+            <li>Jeudi : 8h - 17h</li>
+            <li>Vendredi : 8h - 13h</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="text-center">Contact & Localisation</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Adresse:</strong> xxxxxxxxxx</p>
+                <p><strong>Numéro de téléphone:</strong> 819-123-4567</p>
+                <p><strong>Courriel:</strong> centredentaire@centredentaire.ca</p>
+            </div>
+            <div class="col-md-6">
+                <img src="images/map.PNG" class="img-fluid" alt="Map">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rendez-vous" id="rendez-vous">
+    <div class="container">
+        <h2 class="text-center">Rendez-vous</h2>
+        <p class="text-center">Veuillez remplir les champs suivants</p>
+        <form onsubmit="return myconfirm()">
+            <div class="form-group">
+                <input class="form-control" placeholder="Nom" type="text" name="Nom" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Email" type="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Numéro de téléphone" type="text" name="Téléphone" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Services" type="text" name="message" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Date et heure</label>
+                <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY - TIME" type="text">
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Confirmer</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <img src="images/Logo_accueil.png" class="img-fluid" alt="Logo">
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
